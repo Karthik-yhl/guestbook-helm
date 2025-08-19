@@ -1,0 +1,16 @@
+replicaCount: 2
+
+image:
+  repository: gcr.io/google-samples/gb-frontend
+  tag: v5
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: common-nginx   # must match your ingress class
+  host: guestbook.example.com   # change to your domain or <node-ip>.nip.io
+
