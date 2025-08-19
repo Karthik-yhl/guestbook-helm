@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: gcr.io/google-samples/gb-frontend
-  tag: v5
+  repository: nginx
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
@@ -11,6 +11,6 @@ service:
 
 ingress:
   enabled: true
-  className: common-nginx   # must match your ingress class
+  className: common-nginx
   host: 129.153.213.34.nip.io   # change to your domain or <node-ip>.nip.io
 
